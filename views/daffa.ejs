@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>source select</title>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="filter.css">
+
+
+
+<div class='row r1' align="center">
+   <h1 font=" garmond">Happy Journey</h1>
+   <div class='row r2'>
+   		<h3> -The best way to find your way</h3>
+   </div>
+</div>
+<div class="row r5">
+<div class="col-lg-8"></div>
+
+<div class="col-md-1 c2">
+     <label style="color: white" >filter</label>
+    <select name="filselect">
+      <option value="1">f1</option>
+      <option value="2" >f2</option>
+      <option value="3" >F3</option>
+    </select>
+</div>
+
+
+
+ <table class="table table-bordered table-dark" style="margin-left: 30px " style="margin-right:25px">
+  <thead>
+    <tr>
+      <th scope="col">S.NO</th>
+      <th scope="col">Starting Point</th>
+      <th scope="col">Destination Point</th>
+      <th scope="col">Start Time</th>
+      <th scope="col">End Time</th>
+      <th scope="col">Journey Time</th>
+      <th scope="col">Bus Type</th>
+      <th scope="col">Travels</th>
+      <th scope="col">Seats Available</th>
+      <th scope="col">Price</th>
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% for(var i=0; i<data.length ; i++) {%>
+                <tr>
+                    
+        <th> <%= i+1 %> </th> 
+    <th> <%= data[i].start_point %> </th> 
+    <th> <%= data[i].end_point %> </th> 
+    <th> <%= data[i].start_time %> </th> 
+    <th> <%= data[i].end_time %> </th> 
+    <th> <%= data[i].journey_time %> </th> 
+    <th> <%= data[i].type%> </th> 
+    <th> <%= data[i].travels %> </th> 
+    <th> <%= data[i].bus_availseats %> </th>
+    <th> <%= data[i].price %> </th> 
+
+
+  
+                    
+                    
+                </tr>
+                <% } %>
+                <tr>
+  </tbody>
+</table>
+
+
+<div class="row r7" >
+    <div class="col-md-5"></div>
+    <div class="col-md-2">
+      <a href="/formbook"><input type="submit" name="busfilterbtn" value ="proceed to booking" class="btn btn-success"></input></a>
+    </div>
+  </div>
+
+  
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+
+
+</html>
